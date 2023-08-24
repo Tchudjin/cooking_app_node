@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= recipe.title %></title>
+</head>
+<body>
+    <h1><%= recipe.title %></h1>
+    <h2>Ingrédients :</h2>
+    <ul>
+    <% recipe.ingredients.forEach(ingredient => { %>
+        <li><%= ingredient %></li>
+    <% }); %>
+    </ul>
+</body>
+</html>
