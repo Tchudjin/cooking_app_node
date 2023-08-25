@@ -22,9 +22,13 @@ app.get('/recipes/:id', (req, res) => {
   });
   
   // Démarrer le serveur
-  const port = 3000;
-  app.listen(port, () => {
-    console.log(`Serveur démarré sur le port ${port}`);
-  });
+  // const port = 3000;
+  // app.listen(port, () => {
+  //   console.log(`Serveur démarré sur le port ${port}`);
+  // });
 
+  const port = process.env.PORT || 3000; // Utilisation de PORT dynamique pour le déploiement
+app.listen(port, () => {
+    console.log(`Serveur démarré sur le port ${port}`);
+});
   
